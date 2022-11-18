@@ -4003,7 +4003,11 @@ public class ConnectionImpl extends ConnectionPropertiesImpl implements MySQLCon
      *                if a database access error occurs.
      */
     public java.sql.PreparedStatement prepareStatement(String sql) throws SQLException {
-        return prepareStatement(sql, DEFAULT_RESULT_SET_TYPE, DEFAULT_RESULT_SET_CONCURRENCY);
+        java.sql.PreparedStatement pStmt = prepareStatement(sql, DEFAULT_RESULT_SET_TYPE, DEFAULT_RESULT_SET_CONCURRENCY);
+
+        ((com.mysql.jdbc.PreparedStatement) pStmt).setRetrieveGeneratedKeys(true);
+
+        return pStmt;
     }
 
     /**

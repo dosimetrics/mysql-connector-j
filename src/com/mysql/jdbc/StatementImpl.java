@@ -2582,7 +2582,7 @@ public class StatementImpl implements Statement {
      * Same as {@link #executeUpdate(String)} but returns long instead of int.
      */
     public long executeLargeUpdate(String sql) throws SQLException {
-        return executeUpdateInternal(sql, false, false);
+        return executeUpdateInternal(sql, false, true);
     }
 
     /**

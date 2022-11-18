@@ -167,7 +167,7 @@ com.mysql.jdbc.noCleanBetweenCompiles=yes
     <property name="snapshot.version" value="-SNAPSHOT" />
     <property name="extra.version" value="" />
     <property name="full.version" value="${version}${extra.version}${snapshot.version}" />
-    <property name="extra.product.name" value="" />
+    <property name="extra.product.name" value="legacy" />
     <property name="fullProdName" value="${prodName}${extra.product.name}-${full.version}" />
     <property name="sourceDir" value="./src" />
     <property name="buildDir" value="./build" />
