@@ -268,7 +268,7 @@ public class StatementImpl implements Statement {
 
     protected ArrayList<ResultSetRow> batchedGeneratedKeys = null;
 
-    protected boolean retrieveGeneratedKeys = false;
+    protected boolean retrieveGeneratedKeys = true;
 
     protected boolean continueBatchOnError = false;
 
