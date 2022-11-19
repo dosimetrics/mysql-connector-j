@@ -726,7 +726,7 @@ public class StatementImpl implements Statement {
      *                if a database access error occurs
      */
     public boolean execute(String sql) throws SQLException {
-        return executeInternal(sql, false);
+        return executeInternal(sql, true);
     }
 
     private boolean executeInternal(String sql, boolean returnGeneratedKeys) throws SQLException {
